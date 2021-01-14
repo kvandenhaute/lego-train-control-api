@@ -1,0 +1,61 @@
+{
+  "name": "lego-train-control-api",
+  "description": "Node.js API to control my LEGO trains",
+  "homepage": "https://github.com/kvandenhaute/lego-train-control-api",
+  "version": "0.0.1",
+  "main": "src/sse.js",
+  "scripts": {
+    "tsc:compile": "tsc --project .",
+    "tsc:watch": "tsc -w --project .",
+    "evergreen": "ncu -u && npm i"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kvandenhaute/lego-train-control-api.git"
+  },
+  "author": "Kevin Van Den Haute",
+  "license": "MIT",
+  "engines": {
+    "node": "^15.5.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "eslint --ext .ts --cache --fix"
+  },
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "http-status-codes": "2.1.4",
+    "lowdb": "1.0.0",
+    "nanoid": "3.1.20",
+    "node-poweredup": "6.9.1",
+    "uuid": "3.4.0",
+    "winston": "3.3.3",
+    "ws": "7.4.2"
+  },
+  "devDependencies": {
+    "@types/cors": "2.8.9",
+    "@types/express": "4.17.9",
+    "@types/lowdb": "1.0.9",
+    "@types/nanoid": "2.1.0",
+    "@types/node": "14.14.20",
+    "@types/uuid": "8.3.0",
+    "@types/ws": "7.4.0",
+    "@typescript-eslint/eslint-plugin": "4.12.0",
+    "@typescript-eslint/parser": "4.12.0",
+    "eslint": "7.17.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-simple-import-sort": "7.0.0",
+    "husky": "4.3.7",
+    "lint-staged": "10.5.3",
+    "npm-check-updates": "10.2.5",
+    "ts-node": "9.1.1",
+    "tslib": "2.1.0",
+    "typescript": "4.1.3"
+  }
+}
